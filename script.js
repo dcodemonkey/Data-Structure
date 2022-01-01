@@ -139,3 +139,43 @@ newArray.delete(1);
 console.log(newArray);
 */
 /* ---------------Implementing An Array: Ends---------------- */
+
+
+/* ---------------Reverse a Array: Starts---------------- */
+/*
+Create a function that reverses a string:
+'Hi My Name is Kunal' should be:
+'lanuK si emaN yM iH'
+
+
+*/
+
+// function reverse(str) {
+//   // check input 
+//   if(!str || str.length < 2 || typeof str !== 'string') {
+//     return 'Hmmm thats not good';
+//   }
+
+//   const backwards = [];
+//   const totalItems = str.length - 1;
+//   for(let i = totalItems; i >= 0; i--) {
+//     backwards.push(str[i]);
+//   }
+//   console.log(backwards);
+//   return backwards.join('');
+// }
+// console.log(reverse('Hi My Name is Kunal'));
+
+// function reverse2(str) {
+//   return str.split('').reverse().join('');
+// }
+// console.log(reverse2('Hi My Name is Kunal'));
+
+// const reverse3 = str => str.split('').reverse().join('');
+// console.log(reverse3('Hi My Name is Kunal'));
+
+const reverse4 = str => [...str].reverse().join('');
+console.log(reverse4('Hi My Name is Kunal'));
+console.log(reverse4('lanuK si emaN yM iH'));
+
+/* ---------------Reverse a Array: Ends---------------- */
