@@ -18,51 +18,51 @@
 // strings.splice(2, 0, 'Alien'); // item 'Alien' will be added at index 2 of the string array, BigO =  O(n/2)
 // // console.log(strings);
 
-/* ---------------Classes in JS---------------- */
+/* ---------------Classes in JS: Starts ---------------- */
 
 // reference type
-[] === []; // false
-var object1 = { value: 10 }
-var object2 = object1;
-var object3 = { value: 10 };
+// [] === []; // false
+// var object1 = { value: 10 }
+// var object2 = object1;
+// var object3 = { value: 10 };
 
-console.log(object1 === object2); // true
-console.log(object1 === object3); // false
+// console.log(object1 === object2); // true
+// console.log(object1 === object3); // false
 
-object1.value = 15;
-console.log(object2.value);
+// object1.value = 15;
+// console.log(object2.value);
 
-// context
+// // context
 
-const object4 = {
-  a: function () {
-    console.log(this);
-  }
-}
+// const object4 = {
+//   a: function () {
+//     console.log(this);
+//   }
+// }
 
-// instantiation
-class Player {
-  constructor(name, type) {
-    console.log(this);
-    this.name = name;
-    this.type = type;
-  }
-  introduce() {
-    console.log(`Hi I am ${this.name}, I'm a ${this.type}`);
-  }
-}
+// // instantiation
+// class Player {
+//   constructor(name, type) {
+//     console.log(this);
+//     this.name = name;
+//     this.type = type;
+//   }
+//   introduce() {
+//     console.log(`Hi I am ${this.name}, I'm a ${this.type}`);
+//   }
+// }
 
-class Wizard extends Player {
-  constructor(name, type) {
-    super(name, type)
-  }
-  play() {
-    console.log(`WEEEEEE I'm a ${this.type}`);
-  }
-}
+// class Wizard extends Player {
+//   constructor(name, type) {
+//     super(name, type)
+//   }
+//   play() {
+//     console.log(`WEEEEEE I'm a ${this.type}`);
+//   }
+// }
 
-const wizard = new Wizard('Kunal', 'Healer');
-const wizard2 = new Wizard('Rohan', 'Dark Magic');
+// const wizard = new Wizard('Kunal', 'Healer');
+// const wizard2 = new Wizard('Rohan', 'Dark Magic');
 
 // Classical Ingeritance
 
@@ -85,3 +85,57 @@ const wizard2 = new Wizard('Rohan', 'Dark Magic');
 // wizard2.play = function() {
 //   console.log(`WEEEEEE I'm a ${this.type}`);
 // }
+
+/* ---------------Classes in JS: Ends---------------- */
+
+
+/* ---------------Implementing An Array: Starts---------------- */
+/*
+class MyArray {
+  constructor(){
+    this.length = 0;
+    this.data = {};
+  }
+
+  get(index) {
+    return this.data[index];
+  }
+
+  push(item) {
+    this.data[this.length] = item;
+    this.length++;
+    return this.length;
+  }
+
+  pop() {
+    const lastItem = this.data[this.length - 1];
+    delete this.data[this.length - 1];
+    this.length--;
+    return lastItem;
+  }
+
+  delete(index) {
+    const item = this.data[index];
+    this.shiftItems(index);
+  }
+
+  shiftItems(index) {
+    for(let i = index; i < this.length - 1; i++) {
+      this.data[i] = this.data[i+1];
+    }
+    delete this.data[this.length - 1];
+    this.length--;
+  }
+}
+
+const newArray = new MyArray();
+newArray.push('Hi');
+newArray.push('you');
+newArray.push('!');
+console.log(newArray);
+// newArray.pop();
+// newArray.pop();
+newArray.delete(1);
+console.log(newArray);
+*/
+/* ---------------Implementing An Array: Ends---------------- */
